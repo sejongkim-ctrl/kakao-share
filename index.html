@@ -4,31 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta property="og:title" content="12월 이라는 종착역 고생하셨습니다">
-    <meta property="og:description" content="2026 병오년 새해 복 많이 받으세요">
+    <meta property="og:title" content="원하는 제목">
+    <meta property="og:description" content="원하는 설명">
+    <meta property="og:image" content="./thumbnail.png">
     
-    <meta property="og:image" content="./kakao-share_thumb.png">
-    
-    <title>이미지 보기</title> <style>
+    <title>초대장</title>
+
+    <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #000; /* 검은색 배경 */
+            background-color: #000; /* 배경색: 검정 */
+            
+            /* 내용물 중앙 정렬 설정 */
             display: flex;
+            flex-direction: column; /* 중요: 세로로 배치하라! */
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
+
+        /* GIF 이미지 스타일 */
         img {
-            max-width: 100%;
+            max-width: 100%; /* 화면보다 크면 줄어들게 */
             height: auto;
             display: block;
+            margin-bottom: 30px; /* 버튼과의 간격 벌리기 */
+        }
+
+        /* ▼▼▼ [2] 버튼 디자인 (여기서 색상/크기 변경) ▼▼▼ */
+        .cta-button {
+            background-color: #D4AF37; /* 버튼 색상 (현재: 골드) */
+            color: #000000;            /* 글자 색상 (현재: 검정) */
+            
+            padding: 15px 40px;        /* 버튼 크기 (상하, 좌우) */
+            font-size: 18px;           /* 글자 크기 */
+            font-weight: bold;         /* 글자 굵게 */
+            text-decoration: none;     /* 밑줄 제거 */
+            border-radius: 50px;       /* 둥근 모서리 */
+            
+            /* 애니메이션 효과 (선택사항) */
+            transition: transform 0.2s; 
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4); /* 버튼 그림자 */
+        }
+
+        /* 버튼에 마우스 올렸을 때 효과 */
+        .cta-button:hover {
+            transform: scale(1.05); /* 살짝 커짐 */
+            background-color: #ffd700; /* 색이 밝아짐 */
         }
     </style>
 </head>
 <body>
 
-    <img src="./kakao-share.gif" alt="메인 이미지">
+    <img src="./main.gif" alt="메인 이미지">
+
+    <a href="https://www.soobrand.com" class="cta-button" target="_blank">
+        공식 홈페이지 방문하기
+    </a>
 
 </body>
 </html>
